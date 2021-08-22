@@ -71,3 +71,8 @@ gem 'acts_as_votable'
 gem 'friendly_id', '~> 5.4.0'
 gem 'exception_notification'
 gem 'invisible_captcha'
+# gem 'rspotify'
+gem 'rspotify', :git => 'https://github.com/rormvp/rspotify.git', :branch => 'shows-episodes', group: :development
+gem 'httparty'
+
+# https://github.com/rormvp/rspotify/tree/shows-episodes

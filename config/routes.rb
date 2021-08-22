@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'artists/index'
+  get 'artists/show'
+  get 'artists/search'
   devise_for :users, 
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks',
                    confirmations: 'users/confirmations',
@@ -23,4 +26,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show]
 
+  get '/artists', to: 'artists#index'
+  get '/artists/:id', to: 'artists#show', as: 'artist'
+  get '/search', to: 'artists#search'
 end

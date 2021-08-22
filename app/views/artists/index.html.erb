@@ -1,0 +1,6 @@
+#views/artists/index.html.erb
+<h1 class="page-header">Artists Matching <%= params[:artist_name] %></h1><ul>
+  <% @artists.each do |artist| %>
+    <li><%= artist.name %> | <%= link_to "Show", artist_path(artist.id) %> </li>
+  <% end %>
+</ul>

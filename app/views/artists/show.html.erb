@@ -1,0 +1,12 @@
+#controllers/artists_controller.rb
+#views/artists/show.html.erb
+<% @artist.albums(country: 'US').each do |album| %>
+  <%= album.album_type %>
+  <ul>
+    <% album.tracks.each do |track| %>
+      <li>
+        <%= track.name %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

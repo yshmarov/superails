@@ -1,0 +1,6 @@
+<%= form_tag artists_path, method: "get", html: { class: "form" } do %>
+  <div class="form-group col-xs-4">
+    <%= text_field_tag(:artist_name, "", placeholder: "Enter artist name", class: "form-control") %>
+  </div>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
